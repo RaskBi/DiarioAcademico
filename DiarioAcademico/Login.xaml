@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioAcademico.Login">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Login" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+            <Entry Placeholder="Ingrese Email"  x:Name="txtEmail"></Entry>
+            <Entry Placeholder="Ingrese Password" IsPassword="True"  x:Name="txtPass"></Entry>
+            <Button BorderWidth="1" 
+            BorderColor="DarkCyan" 
+            BackgroundColor="CadetBlue"
+            BorderRadius="100"
+            TextColor="Black" Clicked="btnLogin_Clicked" Text="Login" x:Name="btnLogin"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
