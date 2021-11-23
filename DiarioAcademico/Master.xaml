@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioAcademico.Master"
+             Title="Master">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="MyUserName" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Button x:Name="Logout" Text="Logout" BackgroundColor="White" ImageSource="Logout.png" Clicked="Logout_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

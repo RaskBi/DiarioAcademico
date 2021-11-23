@@ -1,17 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DiarioAcademico.Login">
+             x:Class="DiarioAcademico.Login"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <StackLayout Padding="10">
-            <Label Text="Login" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
-            <Entry Placeholder="Ingrese Email"  x:Name="txtEmail"></Entry>
-            <Entry Placeholder="Ingrese Password" IsPassword="True"  x:Name="txtPass"></Entry>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="15">
+            <Image Source="Icon.png"/>
+            <Label Text="Login" HorizontalTextAlignment="Center" Padding="20" TextColor="Black" FontSize="36"/>
+            <Entry Placeholder="Email"  x:Name="txtEmail"></Entry>
+            <Entry Placeholder="Password" IsPassword="True"  x:Name="txtPass"></Entry>
             <Button BorderWidth="1" 
-            BorderColor="DarkCyan" 
-            BackgroundColor="CadetBlue"
-            BorderRadius="100"
+            BorderColor="Black" 
+            BackgroundColor="WhiteSmoke"
+            BorderRadius="20"
+            ImageSource="Login.png"
+            FontSize="20"
             TextColor="Black" Clicked="btnLogin_Clicked" Text="Login" x:Name="btnLogin"/>
+            <Button BorderWidth="1" 
+            BorderColor="black"
+            BackgroundColor="WhiteSmoke"
+            BorderRadius="20"
+            ImageSource="Register.png"
+            FontSize="20"
+            TextColor="Black" Text="Registrar" Clicked="btnRegistrar_Clicked" x:Name="btnRegistrar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

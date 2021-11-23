@@ -1,23 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DiarioAcademico.MainPage">
-    
-    <StackLayout Padding="10">
-        <Label FontFamily="fontello" Text="&#xF14B; Registro" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
-        <Entry Placeholder="Nuevo Email" HorizontalTextAlignment="Center" x:Name="txtNEmail"/>
-         <Entry Placeholder="Nueva contraseña" HorizontalTextAlignment="Center" IsPassword="True" x:Name="txtNcontra"/>
+             x:Class="DiarioAcademico.MainPage"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="15">
+        <Image Source="Icon.png"/>
+        <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Black" Padding="20" FontSize="36"/>
+        <Entry Placeholder="Nuevo Email" x:Name="txtNEmail"/>
+         <Entry Placeholder="Nueva contraseña" IsPassword="True" x:Name="txtNcontra"/>
             <Button BorderWidth="1" 
-            BorderColor="DarkCyan" 
-            BackgroundColor="CadetBlue"
+            BorderColor="Black" 
+            BackgroundColor="WhiteSmoke"
             BorderRadius="100"
+            ImageSource="Register.png"
+            FontSize="20"
             TextColor="Black" Text="Registrar" Clicked="btnRegistrar_Clicked" x:Name="btnRegistrar"/>
             <Button 
             BorderWidth="1" 
-            BorderColor="DarkCyan" 
-            BackgroundColor="CadetBlue"
-            BorderRadius="100"
-            TextColor="Black"  Text="Ir al Login" Clicked="btnIrLog_Clicked" x:Name="btnIrLog"/>
+            BorderColor="Black" 
+            BackgroundColor="WhiteSmoke"
+            BorderRadius="20"
+            ImageSource="Login.png"
+            FontSize="20"
+            TextColor="Black"  Text="Login" Clicked="btnIrLog_Clicked" x:Name="btnIrLog"/>
     </StackLayout>
 
 </ContentPage>  

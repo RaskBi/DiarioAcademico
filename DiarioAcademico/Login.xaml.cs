@@ -11,10 +11,10 @@ using Xamarin.Forms.Xaml;
 
 namespace DiarioAcademico
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        public string WebAPIkey = "AIzaSyBJpv7lEK_IuBI5-AzTnoiQgbwf4yL3u3U";
+        public string WebAPIkey = "AIzaSyA8ily5_Cy1fSt-mVlpkeepZXzH8byGPHA";
         public Login()
         {
             InitializeComponent();
@@ -29,12 +29,17 @@ namespace DiarioAcademico
                 var content = await auth.GetFreshAuthAsync();
                 var serializedcontnet = JsonConvert.SerializeObject(content);
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
-                //await Navigation.PushAsync(new MyDashboardPage());
+                await Navigation.PushAsync(new Menu());
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Alert", "Invalid useremail or password", "OK");
+                await App.Current.MainPage.DisplayAlert("Alerta", "Usuario o contraseña invalido", "OK");
             }
+        }
+
+        async private void btnRegistrar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
