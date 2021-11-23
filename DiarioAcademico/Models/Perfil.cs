@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DiarioAcademico.Models
 {
-    class Perfil
+    public class Perfil
     {
         [PrimaryKey, AutoIncrement]
         public Guid perfilId { get; set; }

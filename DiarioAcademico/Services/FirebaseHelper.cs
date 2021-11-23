@@ -15,7 +15,7 @@ namespace DiarioAcademico.Services
         {
 
             return (await firebase
-              .Child("Perfil")
+              .Child("perfil")
               .OnceAsync<Perfil>()).Select(item => new Perfil
               {
                   per_nombre = item.Object.per_nombre,
@@ -31,7 +31,7 @@ namespace DiarioAcademico.Services
         public async Task AddPerfil(Perfil _perfil)
         {
             await firebase
-            .Child("Perfil")
+            .Child("perfil")
             .PostAsync(new Perfil()
             {
                 perfilId = Guid.NewGuid(),
@@ -47,11 +47,11 @@ namespace DiarioAcademico.Services
         public async Task UpdatePerfil(Perfil _perfil)
         {
             var toUpdatePerfil = (await firebase
-              .Child("Perfil")
+              .Child("perfil")
               .OnceAsync<Perfil>()).Where(a => a.Object.perfilId == _perfil.perfilId).FirstOrDefault();
 
             await firebase
-              .Child("Perfil")
+              .Child("perfil")
               .Child(toUpdatePerfil.Key)
               .PutAsync(new Perfil() { perfilId = _perfil.perfilId, per_nombre = _perfil.per_nombre, per_apellido = _perfil.per_apellido,
                   per_nickName = _perfil.per_nickName, per_edad = _perfil.per_edad, per_institucion = _perfil.per_institucion});
@@ -61,9 +61,9 @@ namespace DiarioAcademico.Services
         public async Task DeletePerfil(Guid personId)
         {
             var toDeletePerfil = (await firebase
-              .Child("Perfil")
+              .Child("perfil")
               .OnceAsync<Perfil>()).Where(a => a.Object.perfilId == personId).FirstOrDefault();
-            await firebase.Child("Perfil").Child(toDeletePerfil.Key).DeleteAsync();
+            await firebase.Child("perfil").Child(toDeletePerfil.Key).DeleteAsync();
 
         }
 

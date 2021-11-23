@@ -11,7 +11,7 @@ namespace DiarioAcademico
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Login());
+            //MainPage = new NavigationPage(new Login());
             if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))
             {
                 MainPage = new NavigationPage(new Menu());

@@ -48,5 +48,10 @@ namespace DiarioAcademico
             Preferences.Remove("MyFirebaseRefreshToken");
             App.Current.MainPage = new NavigationPage(new Login());
         }
+
+        async private void Perfil_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.ListViewPage());
+        }
     }
 }

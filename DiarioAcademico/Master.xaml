@@ -6,7 +6,9 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="MyUserName" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Button x:Name="Perfil" Text="Perfil" BackgroundColor="White" Clicked="Perfil_Clicked"/>
             <Button x:Name="Logout" Text="Logout" BackgroundColor="White" ImageSource="Logout.png" Clicked="Logout_Clicked"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
