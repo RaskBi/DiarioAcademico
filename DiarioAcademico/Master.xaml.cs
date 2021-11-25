@@ -51,7 +51,7 @@ namespace DiarioAcademico
 
         async private void Perfil_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.ListViewPage());
+            //await Navigation.PushAsync(new );
         }
     }
 }

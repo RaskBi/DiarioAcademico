@@ -8,7 +8,7 @@ namespace DiarioAcademico.Models
     public class Perfil
     {
         [PrimaryKey, AutoIncrement]
-        public Guid perfilId { get; set; }
+        public int perfilId { get; set; }
         [MaxLength (40)]
         public string per_nickName { get; set; }
         [MaxLength(40)]
@@ -19,6 +19,8 @@ namespace DiarioAcademico.Models
         public int per_edad { get; set; }
         [MaxLength(40)]
         public string per_institucion { get; set; }
+        [MaxLength(40)]
+        public int idRegistro { get; set; }
 
     }
 }
