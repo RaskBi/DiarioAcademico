@@ -7,23 +7,28 @@
     <StackLayout VerticalOptions="CenterAndExpand" Padding="15">
         <Image Source="Icon.png"/>
         <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Black" Padding="20" FontSize="36"/>
-        <Entry Placeholder="Nuevo Email" x:Name="txtNEmail"/>
-         <Entry Placeholder="Nueva contraseña" IsPassword="True" x:Name="txtNcontra"/>
-            <Button BorderWidth="1" 
-            BorderColor="Black" 
-            BackgroundColor="WhiteSmoke"
-            BorderRadius="100"
-            ImageSource="Register.png"
-            FontSize="20"
-            TextColor="Black" Text="Registrar" Clicked="btnRegistrar_Clicked" x:Name="btnRegistrar"/>
-            <Button 
-            BorderWidth="1" 
-            BorderColor="Black" 
-            BackgroundColor="WhiteSmoke"
-            BorderRadius="20"
-            ImageSource="Login.png"
-            FontSize="20"
-            TextColor="Black"  Text="Login" Clicked="btnIrLog_Clicked" x:Name="btnIrLog"/>
+        <Entry x:Name="txtNEmail" Placeholder="Email" />
+        <Entry x:Name="txtNcontra" Placeholder="Contraseña" IsPassword="True" />
+        <Entry x:Name="txtNUsuario" Placeholder="Usuario"/>
+        <Entry x:Name="txtNNombre" Placeholder="Nombre"/>
+        <Entry x:Name="txtNApellido" Placeholder="Apellido"/>
+        <Entry x:Name="txtNEdad" Placeholder="Edad" Keyboard="Numeric"/>
+        <Entry x:Name="txtNInstitucion" Placeholder="Institucion"/>
+        <Button BorderWidth="1" 
+        BorderColor="Black" 
+        BackgroundColor="WhiteSmoke"
+        BorderRadius="100"
+        ImageSource="Register.png"
+        FontSize="20"
+        TextColor="Black" Text="Registrar" Clicked="btnRegistrar_Clicked" x:Name="btnRegistrar"/>
+        <Button 
+        BorderWidth="1" 
+        BorderColor="Black" 
+        BackgroundColor="WhiteSmoke"
+        BorderRadius="20"
+        ImageSource="Login.png"
+        FontSize="20"
+        TextColor="Black"  Text="Login" Clicked="btnIrLog_Clicked" x:Name="btnIrLog"/>
     </StackLayout>
 
 </ContentPage>  

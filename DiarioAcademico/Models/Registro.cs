@@ -5,13 +5,9 @@ using System.Text;
 
 namespace DiarioAcademico.Models
 {
-    class Registro
+    public class Registro
     {
-        [PrimaryKey, AutoIncrement]
-        public int idRegistro { get; set; }
-        [MaxLength(40)]
-        public string log_email { get; set; }
-        [MaxLength(40)]
-        public string log_contrasenia { get; set; }
+       public int idRegistro { get; set; }
+       public string reg_email { get; set; }
     }
 }
