@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioAcademico.viewPerfil">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label x:Name="textos" Text=""/>
+            <Label Text="Perfil de Usuario" Padding="20" FontSize="Title" HorizontalTextAlignment="Center"/>
+            <Label x:Name="texto" Text=""/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Usuario" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtUsuario" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Nombre" FontSize="20" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" IsReadOnly="True" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Apellido" FontSize="20" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtApellido" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Edad" FontSize="20" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtEdad" Grid.Row="3" Grid.Column="1"/>
+                <Label Text="Institucio" FontSize="20" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtInstitucion" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+            <Button x:Name="btnGuardar" Padding="15" FontSize="20" Text="Guardar" VerticalOptions="EndAndExpand" Grid.ColumnSpan="2" Clicked="btnGuardar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

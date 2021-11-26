@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioAcademico.viewTareas">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Apuntes" FontSize="Title" Padding="20" HorizontalTextAlignment="Center"/>
+            <Picker x:Name="pckTareas" Title="Seleccione una materia" ItemDisplayBinding="{Binding mat_nombre}" SelectedIndexChanged="pckTareas_SelectedIndexChanged"/>
+
+            <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid Padding="10">
+                                <Frame BackgroundColor="LightGoldenrodYellow">
+                                    <StackLayout >
+                                        <Label x:Name="lblnombre" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="20" Text="{Binding tar_nombre}"/>
+                                        <Label x:Name="lbldesc" VerticalOptions="Center" FontSize="15" TextColor="DarkGreen" Text="{Binding tar_desc}"/>
+                                        <Label x:Name="lblFechaI" VerticalOptions="Center" FontSize="15" TextColor="DarkGreen" Text="{Binding tar_fecha_inicio}"/>
+                                        <Label x:Name="lblFechaF" VerticalOptions="Center" FontSize="15" TextColor="DarkGreen" Text="{Binding tar_fecha_fin}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btbGuardar" Text="Ingreasar" Clicked="btbGuardar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

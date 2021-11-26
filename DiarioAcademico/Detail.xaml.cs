@@ -16,5 +16,10 @@ namespace DiarioAcademico
         {
             InitializeComponent();
         }
+
+        private void btnTomarFoto_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

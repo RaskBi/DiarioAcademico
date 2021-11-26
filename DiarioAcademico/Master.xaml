@@ -2,12 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiarioAcademico.Master"
-             Title="Master">
+             Title="Master"
+             BackgroundColor="#0296f3">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="MyUserName" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-            <Button x:Name="Perfil" Text="Perfil" BackgroundColor="White" Clicked="Perfil_Clicked"/>
-            <Button x:Name="Logout" Text="Logout" BackgroundColor="White" ImageSource="Logout.png" Clicked="Logout_Clicked"/>
+        <StackLayout >
+            <Label x:Name="MyUserName" FontSize="22" TextColor="White" Padding="20" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+
+                <Button x:Name="Perfil" Text="Perfil"  FontSize="17" BackgroundColor="#0081e8" TextColor="White" Grid.Row="0" Clicked="Perfil_Clicked"/>
+                <Button x:Name="Materias" Text="Materias"  FontSize="17" BackgroundColor="#0081e8" TextColor="White" Grid.Row="1" Clicked="Materias_Clicked"/>
+                <Button x:Name="Apuntes" Text="Apuntes" FontSize="17" BackgroundColor="#0081e8" TextColor="White" Grid.Row="2" Clicked="Apuntes_Clicked"/>
+                <Button x:Name="Tareas" Text="Tareas" FontSize="17" BackgroundColor="#0081e8" TextColor="White" Grid.Row="3" Clicked="Tareas_Clicked"/>
+                
+            </Grid>
+            <Button x:Name="Logout" FontSize="18" Text="Logout" BackgroundColor="#0296f3" TextColor="White" ImageSource="Logout.png" VerticalOptions="EndAndExpand" Clicked="Logout_Clicked"/>
+            
             
         </StackLayout>
     </ContentPage.Content>

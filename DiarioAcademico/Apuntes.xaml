@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioAcademico.Apuntes">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Apuntes" FontSize="Title" Padding="20" HorizontalTextAlignment="Center"/>
+            <Picker x:Name="pckMateria" Title="Seleccione una materia" ItemDisplayBinding="{Binding mat_nombre}" SelectedIndexChanged="pckMateria_SelectedIndexChanged"/>
+
+            <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <Grid Padding="10">
+                                <Frame BackgroundColor="LightGoldenrodYellow">
+                                    <StackLayout >
+                                        <Label x:Name="lblnombre" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="20" Text="{Binding apu_nombre}"/>
+                                        <Label x:Name="lbldesc" VerticalOptions="Center" FontSize="15" TextColor="DarkGreen" Text="{Binding apu_descripcion}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnIngresar" BackgroundColor="#83fc97" ImageSource="plusn.png" Grid.Row="0" Grid.Column="0" Clicked="btnIngresar_Clicked"/>
+                <Button x:Name="btnEliminar" BackgroundColor="#fc8383" ImageSource="delete.png" Grid.Row="0" Grid.Column="1" Clicked="btnEliminar_Clicked"/>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

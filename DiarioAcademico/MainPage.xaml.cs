@@ -22,6 +22,7 @@ namespace DiarioAcademico
         private const string Url = "http://186.101.162.131/agendax/tablas/";
         private readonly HttpClient client = new HttpClient();
         public string WebAPIkey = "AIzaSyA8ily5_Cy1fSt-mVlpkeepZXzH8byGPHA";
+        private int registroId= 0;
         public MainPage()
         {
             InitializeComponent();

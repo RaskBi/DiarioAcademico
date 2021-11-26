@@ -12,12 +12,13 @@ namespace DiarioAcademico
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : MasterDetailPage
     {
-        public Menu()
+        public Menu(int idReg)
         {
             InitializeComponent();
-            this.Master = new Master();
+            this.Master = new Master(idReg);
             this.Detail = new NavigationPage(new Detail());
             App.MAsterDet = this;
+
         }
     }
 }

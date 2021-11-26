@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioAcademico.viewMaterias">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.png" Priority="0" Order="Primary" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        
+        <StackLayout Padding="10">
+            <Label Text="Materias" FontSize="Title" Padding="20" HorizontalTextAlignment="Center"/>
+            
+                <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="lblnombre" FontSize="20" Text="{Binding mat_nombre}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry x:Name="txtMateria" FontSize="20" Placeholder="Materia para ingresar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

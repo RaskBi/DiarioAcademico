@@ -8,13 +8,14 @@ namespace DiarioAcademico
     public partial class App
     {
         public static MasterDetailPage MAsterDet { get; set; }
-        public App()
-        {
+        public App(int idReg)
+        {   
             InitializeComponent();
             //MainPage = new NavigationPage(new Login());
             if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))
             {
-                MainPage = new NavigationPage(new Menu());
+                
+                MainPage = new NavigationPage(new Menu(idReg));
             }
             else
             {

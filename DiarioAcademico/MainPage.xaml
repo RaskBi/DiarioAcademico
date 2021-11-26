@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiarioAcademico.MainPage"
              NavigationPage.HasNavigationBar="false">
-
-    <StackLayout VerticalOptions="CenterAndExpand" Padding="15">
+    <ScrollView HeightRequest="300">
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="15">
         <Image Source="Icon.png"/>
         <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Black" Padding="20" FontSize="36"/>
         <Entry x:Name="txtNEmail" Placeholder="Email" />
@@ -29,6 +29,6 @@
         ImageSource="Login.png"
         FontSize="20"
         TextColor="Black"  Text="Login" Clicked="btnIrLog_Clicked" x:Name="btnIrLog"/>
-    </StackLayout>
-
+        </StackLayout>
+    </ScrollView>
 </ContentPage>  
