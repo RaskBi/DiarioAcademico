@@ -57,10 +57,10 @@ namespace DiarioAcademico
             //datos Tareas
             var content = await client.GetStringAsync(Url + "Tareas/get_tareaWhereIdMaretia.php?idMaterias=" + cod);
 
-            var format = "dd/MM/yyyy"; // your datetime format
-            var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
+            //var format = "dd/MM/yyyy"; // your datetime format
+            //var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
 
-            List<DiarioAcademico.Models.Tareas> post = JsonConvert.DeserializeObject<List<DiarioAcademico.Models.Tareas>>(content, dateTimeConverter);
+            List<DiarioAcademico.Models.Tareas> post = JsonConvert.DeserializeObject<List<DiarioAcademico.Models.Tareas>>(content);
             _postTar = new ObservableCollection<DiarioAcademico.Models.Tareas>(post);
 
 
